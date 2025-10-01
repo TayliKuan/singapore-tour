@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新加坡五日遊行程 🇸🇬</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .day-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .day-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .day-title {
+            flex: 1;
+        }
+
+        .day-title h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+
+        .day-date {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .activity {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .time {
+            font-weight: bold;
+            color: #764ba2;
+            min-width: 100px;
+            font-size: 1.1em;
+            flex-shrink: 0;
+        }
+
+        .details {
+            flex: 1;
+            padding-left: 15px;
+        }
+
+        .location {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-top: 5px;
+        }
+
+        .transport {
+            background: #fff3cd;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #ffc107;
+            font-size: 0.9em;
+            line-height: 1.8;
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+
+        .tips {
+            background: #d1ecf1;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid #17a2b8;
+        }
+
+        .tips-title {
+            font-weight: bold;
+            color: #0c5460;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .metro-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .metro-line {
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 0.9em;
+        }
+
+        .ns-line { background: #fee; border-left: 4px solid #dc3545; }
+        .ew-line { background: #efe; border-left: 4px solid #28a745; }
+        .ne-line { background: #f3e5f5; border-left: 4px solid #9c27b0; }
+        .cc-line { background: #fff3e0; border-left: 4px solid #ff9800; }
+        .dt-line { background: #e3f2fd; border-left: 4px solid #2196f3; }
+        .te-line { background: #f5f5f5; border-left: 4px solid #795548; }
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8em; }
+            .day-header { flex-direction: column; text-align: center; }
+            .day-number { margin-bottom: 15px; margin-right: 0; }
+            .activity { flex-direction: column; }
+            .time { margin-bottom: 10px; min-width: auto; }
+            .details { padding-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇸🇬 新加坡五日遊行程</h1>
+            <p class="subtitle">2025年10月6日 - 10月10日</p>
+            <p class="member">官官 & 周周</p>
+        </header>
+
+        <!-- Day 1 -->
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-number">1</div>
+                <div class="day-title">
+                    <h2>魚尾獅公園 + 天空樹燈光秀</h2>
+                    <div class="day-date">10/6 (一)</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">05:30</div>
+                <div class="details">
+                    <div class="location">✈️ 機場集合出發</div>
+                    <div class="description">桃園機場第二航廈集合，08:00起飛</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">12:40</div>
+                <div class="details">
+                    <div class="location">🛬 抵達樟宜機場第二航廈</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">13:30</div>
+                <div class="details">
+                    <div class="location">🍔 Shake Shack（Jewel Changi）</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往飯店</div>
+                <div class="details">
+                    <div class="transport">
+                        🚇 <strong style="background-color: green; color: white; padding: 2px 6px; border-radius: 4px;">CG線</strong>
+                        往Tanah Merah方向 (1站)<br>
+                        Changi Airport上車 → Expo下車<br><br>
+                        轉乘 <strong style="background-color: blue; color: white; padding: 2px 6px; border-radius: 4px;">DT線</strong>
+                        往Bukit Panjang方向 (13站)<br>
+                        Expo上車 → Jalan Besar下車<br><br>
+                        步行8分鐘<br>
+                        <strong>路程共約53分鐘</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">15:00</div>
+                <div class="details">
+                    <div class="location">🏨 Check-in 新加坡馨樂庭梧槽公寓酒店</div>
+                    <div class="description">Citadines Rochor Singapore</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往魚尾獅</div>
+                <div class="details">
+                    <div class="transport">
+                        步行5分鐘<br><br>
+                        🚇 <strong style="background-color: blue; color: white; padding: 2px 6px; border-radius: 4px;">DT線</strong>
+                        往Expo方向 (4站)<br>
+                        Rochor上車 → Downtown下車<br><br>
+                        步行14分鐘<br>
+                        <strong>路程共約30分鐘</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">17:30</div>
+                <div class="details">
+                    <div class="location">🦁 魚尾獅公園</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往水舞秀</div>
+                <div class="details">
+                    <div class="transport">步行22分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">20:00</div>
+                <div class="details">
+                    <div class="location">💦 金沙水幕廣場水舞秀</div>
+                    <div class="description">週日～四：20:00、21:00 | 週五、六：20:00、21:00、22:00<br>
+                    很多人會先看20:00的金沙水舞秀，然後馬上接著衝去看20:45的天空樹燈光秀，兩個地方走路約10~15分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往天空樹</div>
+                <div class="details">
+                    <div class="transport">步行18分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">20:45</div>
+                <div class="details">
+                    <div class="location">🌳 超級樹燈光秀 - 濱海灣花園</div>
+                    <div class="description">
+                        <strong>濱海灣花園 Garden by the bay</strong><br>
+                        地址：18 Marina Gardens Dr, Singapore<br>
+                        戶外開放時間：05:00~翌日02:00<br>
+                        室內開放時間：09:00~21:00<br>
+                        天空樹燈光秀時間：每天19:45、20:45
+                    </div>
+                    <div class="tips">
+                        <div class="tips-title">💡 濱海灣花園旅遊小Tips</div>
+                        1. 單純逛濱海灣花園免費、看天空樹燈光秀免費、戲水區免費<br>
+                        2. 要門票的設施：花穹冷室、雲霧林、超級樹天空步道、接駁車<br>
+                        3. 天空樹燈光秀時間：每天19:45、20:45
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往老巴剎</div>
+                <div class="details">
+                    <div class="transport">
+                        <strong>選項1：步行30分鐘</strong><br><br>
+                        <strong>選項2：</strong><br>
+                        步行6分鐘<br><br>
+                        🚇<strong style="background-color: brown; color: white; padding: 2px 6px; border-radius: 4px;">TE線</strong>
+                        往Bayshore方向 (2站)<br>
+                        Shenton Way上車 → Gardens by the Bay下車<br><br>
+                        步行12分鐘<br>
+                        <strong>路程共約26分鐘</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">晚餐</div>
+                <div class="details">
+                    <div class="location">🍖 老巴剎 + 沙嗲一條街</div>
+                    <div class="description">(營業時間約 AM10:00-22:00) 及沙嗲一條街(19:00準時開烤)</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">返回飯店</div>
+                <div class="details">
+                    <div class="transport">
+                        步行5分鐘<br><br>
+                        🚇 <strong style="background-color: blue; color: white; padding: 2px 6px; border-radius: 4px;">DT線</strong>
+                        往Bukit Panjang方向 (4站)<br>
+                        Downtown上車 → Rochor下車<br><br>
+                        步行5分鐘
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+       
+   <!-- Day 2 -->
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-number">2</div>
+                <div class="day-title">
+                    <h2>S.E.A.海洋館 + 牛車水 + 克拉碼頭</h2>
+                    <div class="day-date">10/7 (二)</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">早餐</div>
+                <div class="details">
+                    <div class="location">🍜 竹腳中心 Tekka Centre</div>
+                    <div class="description">營業時間 06:30-21:00</div>
+                    <div class="transport">步行5分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往聖淘沙</div>
+                <div class="details">
+                    <div class="transport">
+                        步行4分鐘<br><br>
+                        🚇 <strong style="background-color: purple; color: white; padding: 2px 6px; border-radius: 4px;">NE線</strong>
+                        往Harbourfront方向 (5站)<br>
+                        Little India上車 → Harbourfront下車<br><br>
+                        步行4分鐘<br><br>
+                        轉乘 <strong style="background-color: pink; color: white; padding: 2px 6px; border-radius: 4px;">Sentosa Express</strong>
+                        往Beach Station方向 (1站)<br>
+                        VivoCity Station上車 → Resorts World Station下車<br><br>
+                        步行3分鐘<br>
+                        <strong>路程共約37分鐘</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">10:00</div>
+                <div class="details">
+                    <div class="location">🐠 S.E.A.海洋館 Singapore Oceanarium</div>
+                    <div class="description">開放時間 10:00-19:00</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往牛車水</div>
+                <div class="details">
+                    <div class="transport">
+                        步行3分鐘<br><br>
+                        <strong style="background-color: pink; color: white; padding: 2px 6px; border-radius: 4px;">Sentosa Express</strong>
+                        往VivoCity Station方向 (1站)<br>
+                        Resorts World Station上車 → VivoCity Station下車<br><br>
+                        步行4分鐘<br><br>
+                        轉乘 🚇 <strong style="background-color: purple; color: white; padding: 2px 6px; border-radius: 4px;">NE線</strong>
+                        往Punggol Coast方向 (2站)<br>
+                        Harbourfront上車 → Chinatown下車<br><br>
+                        步行10分鐘<br>
+                        <strong>路程共約36分鐘</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">15:00</div>
+                <div class="details">
+                    <div class="location">🍗 天天海南雞飯（午餐）</div>
+                    <div class="description">營業時間 10:00-20:00</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往佛牙寺</div>
+                <div class="details">
+                    <div class="transport">步行3分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">16:00</div>
+                <div class="details">
+                    <div class="location">🏛️ 新加坡佛牙寺龍華院</div>
+                    <div class="description">開放時間 07:00-19:00<br>
+                    據說寺中有供奉佛牙，不過好像看不到。免費參觀，可以簡單繞一圈，冷氣開很強，是在牛車水周圍散步時躲太陽、躲下雨的好地方😆</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往馬里安曼廟</div>
+                <div class="details">
+                    <div class="transport">步行3分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">17:00</div>
+                <div class="details">
+                    <div class="location">🕌 馬里安曼廟（印度廟）</div>
+                    <div class="description">開放時間 05:30-11:30、16:00-20:30<br>
+                    拍照需要另外支付"拍照費"</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往唐城坊</div>
+                <div class="details">
+                    <div class="transport">步行5分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">傍晚</div>
+                <div class="details">
+                    <div class="location">🏮 唐城坊</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往寶塔街</div>
+                <div class="details">
+                    <div class="transport">步行3分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">傍晚</div>
+                <div class="details">
+                    <div class="location">🏮 寶塔街 Pagoda Street</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往舊禧街警察局</div>
+                <div class="details">
+                    <div class="transport">步行15分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">傍晚</div>
+                <div class="details">
+                    <div class="location">🏛️ 舊禧街警察局</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往讚美廣場</div>
+                <div class="details">
+                    <div class="transport">步行10分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">19:00</div>
+                <div class="details">
+                    <div class="location">⛪ 讚美廣場</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往克拉碼頭</div>
+                <div class="details">
+                    <div class="transport">步行13分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">20:00</div>
+                <div class="details">
+                    <div class="location">🚤 克拉碼頭遊船</div>
+                    <div class="description">建議20:00-22:00搭船，可看金沙酒店燈光秀（20:00、21:00）<br>
+                    整體航程大約40分鐘，克拉碼頭景點會沿著新加坡河看金沙酒店、魚尾獅公園、濱海藝術中心等等，建議先上網預約買票。</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往翠華餐廳</div>
+                <div class="details">
+                    <div class="transport">步行4分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">晚餐</div>
+                <div class="details">
+                    <div class="location">🍽️ 翠華餐廳 TSUI WAH - Clarke Quay Central</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">晚餐後</div>
+                <div class="details">
+                    <div class="location">📍 選擇路線</div>
+                    <div class="transport">
+                        <strong>選項1：前往藤原豆腐炸店</strong><br>
+                        營業時間 17:00-00:00（週一休息）<br><br>
+                        步行13分鐘<br><br>
+                        🚇 <strong>EW線</strong> 往Pasir Ris方向 (4站)<br>
+                        City Hall上車 → Aljunied下車<br><br>
+                        步行8分鐘<br>
+                        <strong>路程共約35分鐘</strong><br><br>
+                        藤原豆腐炸店 → 返回飯店：<br>
+                        步行8分鐘<br><br>
+                        🚇 <strong>EW線</strong> 往Tuas Link方向 (3站)<br>
+                        Aljunied上車 → Bugis下車<br><br>
+                        步行14分鐘<br>
+                        <strong>路程共約34分鐘</strong>
+                        <br>   <br>
+                        <strong>選項2：直接回飯店</strong><br>
+                        步行3分鐘<br><br>
+                        🚇 <strong style="background-color: purple; color: white; padding: 2px 6px; border-radius: 4px;">NE線</strong> 
+                        往Punggol Coast方向 (2站)<br>
+                        Clarke Quay上車 → Little India下車<br><br>
+                        步行4分鐘<br>
+                        <strong>路程共約17分鐘</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-number">3</div>
+                <div class="day-title">
+                    <h2>環球影城 + 哈利波特 + 摩天輪</h2>
+                    <div class="day-date">10/8 (三)</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往怡豐城</div>
+                <div class="details">
+                    <div class="transport">
+                        步行4分鐘<br><br>
+                        🚇 <strong style="background-color: purple; color: white; padding: 2px 6px; border-radius: 4px;">NE線</strong>
+                        往Harbourfront方向 (5站)<br>
+                        Little India上車 → Harbourfront下車<br><br>
+                        步行5分鐘<br>
+                        <strong>路程共約26分鐘</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">早餐</div>
+                <div class="details">
+                    <div class="location">☕ 亞坤咖椰土司（怡豐城B2）</div>
+                    <div class="description">營業時間 07:30-21:00</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往環球影城</div>
+                <div class="details">
+                    <div class="transport">
+                        步行2分鐘<br><br>
+                        <strong style="background-color: pink; color: white; padding: 2px 6px; border-radius: 4px;">Sentosa Express</strong>
+                        往Beach Station方向 (1站)<br>
+                        VivoCity Station上車 → Resorts World Station下車<br><br>
+                        步行2分鐘<br>
+                        <strong>路程共約7分鐘</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">10:00-17:00</div>
+                <div class="details">
+                    <div class="location">🎢 新加坡環球影城</div>
+                    <div class="tips">
+                        <div class="tips-title">⚠️ 注意事項</div>
+                        在9月27日到11月2日期間，晚上有新加坡環球影城萬聖夜，只能玩上午10點-下午5點
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往哈利波特</div>
+                <div class="details">
+                    <div class="transport">步行6分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">17:00後</div>
+                <div class="details">
+                    <div class="location">⚡ 哈利波特：魔法幻境秀</div>
+                    <div class="description">Harry Potter: Visions of Magic Singapore<br>
+                    開放時間 11:00-22:00<br>
+                    紀念品店無需門票，展期內有路過都可以進店購買喔！</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往摩天輪</div>
+                <div class="details">
+                    <div class="transport">
+                        步行4分鐘<br><br>
+                        <strong style="background-color: pink; color: white; padding: 2px 6px; border-radius: 4px;">Sentosa Express</strong>
+                        往VivoCity Station方向 (1站)<br>
+                        Resorts World Station上車 → VivoCity Station下車<br><br>
+                        步行4分鐘<br><br>
+                        轉乘 🚇 <strong style="background-color: purple; color: white; padding: 2px 6px; border-radius: 4px;">NE線</strong>
+                        往Punggol Coast方向 (2站)<br>
+                        Harbourfront上車 → Chinatown下車<br><br>
+                        步行4分鐘<br><br>
+                        轉乘 🚇 <strong style="background-color: blue; color: white; padding: 2px 6px; border-radius: 4px;">DT線</strong>
+                        往Bukit Panjang方向 (4站)<br>
+                        Chinatown上車 → Promenade下車<br><br>
+                        步行9分鐘<br>
+                        <strong>路程共約51分鐘</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">傍晚</div>
+                <div class="details">
+                    <div class="location">🎡 新加坡摩天觀景輪 Singapore Flyer</div>
+                    <div class="description">開放時間 10:00-22:00，一圈大約30分鐘（未購票）</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往新達城</div>
+                <div class="details">
+                    <div class="transport">步行13分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">晚間</div>
+                <div class="details">
+                    <div class="location">⛲ 新達城 Suntec City - 財富之泉</div>
+                    <div class="description">Fountain of Wealth<br><br>
+                    規模真的是很浮誇，而財富之泉還在1997年時被列入金氏世界紀錄，曾經是世界最大噴泉，"由外向內、由上向下"噴的方式設計，整個就有極其濃厚的聚財招財含義，無論是誰應該都會讓這樣的氣勢所震攝吧！<br><br>
+                    ★開放至中心場次：10:00-12:00、14:00-16:00、18:00-19:30</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">晚餐</div>
+                <div class="details">
+                    <div class="location">🍲 松發肉骨茶（新達城B1）</div>
+                    <div class="description">營業時間 10:30-21:30（到九點）</div>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="time">返回飯店</div>
+                <div class="details">
+                    <div class="transport">
+                        步行6分鐘<br><br>
+                        🚇 <strong style="background-color: blue; color: white; padding: 2px 6px; border-radius: 4px;">DT線</strong>
+                        往Bukit Panjang方向 (2站)<br>
+                        Promenade上車 → Rochor下車<br><br>
+                        步行5分鐘<br>
+                        <strong>路程共約21分鐘</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Day 4 -->
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-number">4</div>
+                <div class="day-title">
+                    <h2>阿拉伯區 + 小印度 + 愛麗絲馬戲團</h2>
+                    <div class="day-date">10/9 (四)</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往阿拉伯區</div>
+                <div class="details">
+                    <div class="transport">步行15分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">早餐</div>
+                <div class="details">
+                    <div class="location">🥙 Singapore Zam Zam Restaurant</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往蘇丹回教堂</div>
+                <div class="details">
+                    <div class="transport">步行1分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">10:00</div>
+                <div class="details">
+                    <div class="location">🕌 蘇丹回教堂</div>
+                    <div class="description">新加坡最古老的清真寺<br>
+                    開放時間：週一到週日 10:00-12:00、14:00-16:00（週五不開放）</div>
+                    <div class="tips">
+                        <div class="tips-title">📋 蘇丹回教堂參觀規則</div>
+                        1. 遊客只能從正門進入（靠近Bussorah Street gate 4&5）<br>
+                        2. 遊客入內有特定的開放時間（早上10點到12點，與下午2點到4點）<br>
+                        3. 入內需脫鞋子<br>
+                        4. 服裝不能穿短褲短袖短裙，任何裸露的衣服，亦不能露出下腳踝，保守原則為主<br>
+                        5. 如果服裝不合規定，清真寺有提供免費的長袍<br>
+                        6. 室內不得錄影，不能用閃光燈拍照
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往香水店</div>
+                <div class="details">
+                    <div class="transport">步行1分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">上午</div>
+                <div class="details">
+                    <div class="location">🌸 Jamal Kazura Aromatics</div>
+                    <div class="description">地址：728 North Bridge Road<br>
+                    有名的阿拉伯無酒精香水，只能用塗抹的方式</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往阿拉伯街</div>
+                <div class="details">
+                    <div class="transport">步行2分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">上午</div>
+                <div class="details">
+                    <div class="location">🎨 阿拉伯街 Arab St</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往哈芝巷</div>
+                <div class="details">
+                    <div class="transport">步行3分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">上午</div>
+                <div class="details">
+                    <div class="location">🎨 哈芝巷</div>
+                    <div class="description">特色街區拍照打卡</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往小印度</div>
+                <div class="details">
+                    <div class="transport">步行18分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">11:30</div>
+                <div class="details">
+                    <div class="location">🛕 維拉馬卡里拉曼廟</div>
+                    <div class="description">Sri Veeramakaliamman Temple<br>
+                    開放時間 05:30-12:00、17:00-21:00<br><br>
+                    維拉瑪卡里亞曼興都廟就在實龍崗路上，特殊的塔門與廟住相當顯眼，是小印度區最知名的印度廟宇，是在1855年由印度移民依南印度風格所建造，廟裡供奉的主神為源自濕婆天神之妻，徵著強大和新生，掌管生死的迦梨女神。</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往Project Oasis</div>
+                <div class="details">
+                    <div class="transport">步行3分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">11:30</div>
+                <div class="details">
+                    <div class="location">🌿 Project Oasis In Little India</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往阿督卡夫回教堂</div>
+                <div class="details">
+                    <div class="transport">步行9分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">12:00</div>
+                <div class="details">
+                    <div class="location">🕌 阿督卡夫回教堂</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往小印度藝術區</div>
+                <div class="details">
+                    <div class="transport">步行8分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">12:00</div>
+                <div class="details">
+                    <div class="location">🎨 小印度藝術區</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往小印度中心</div>
+                <div class="details">
+                    <div class="transport">步行4分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">下午</div>
+                <div class="details">
+                    <div class="location">🏪 小印度中心 + 小印度拱廊</div>
+                    <div class="description">Little India Arcade<br><br>
+                    賣著印度傳統服飾、沙麗、包包的店舖。印度彩繪 Henna<br>
+                    另外小印度拱廊的入口處有一家超級超級熱門的印度甜點店，排隊超長，賣著各式各樣的小零嘴。</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往甘貝爾巷</div>
+                <div class="details">
+                    <div class="transport">步行2分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">下午</div>
+                <div class="details">
+                    <div class="location">🛣️ 甘貝爾巷 Campbell Ln</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往實龍崗路</div>
+                <div class="details">
+                    <div class="transport">步行2分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">下午</div>
+                <div class="details">
+                    <div class="location">🛣️ 實龍崗路 Serangoon Road</div>
+                    <div class="description">而這條實龍崗路 Serangoon Road是小印度區這裡的主要幹道，也是最古老的商店街，沿途兩側有各式各樣的店舖，金飾店、服飾店、紀念品商店、美食餐廳⋯而且路上超級多印度人，車水馬龍相當熱鬧。</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往慕斯達法商場</div>
+                <div class="details">
+                    <div class="transport">步行11分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">14:00</div>
+                <div class="details">
+                    <div class="location">🛒 慕斯達法商場 Mustafa Centre</div>
+                    <div class="description">24小時營業 - 印度百貨 - 最便宜伴手禮<br>
+                    傳聞中全新加坡買伴手禮最便宜的地方，而且是24hr營業，非常適合旅行的最後一天來這邊逛逛。</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往飯店</div>
+                <div class="details">
+                    <div class="transport">步行11分鐘</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">16:00</div>
+                <div class="details">
+                    <div class="location">🏨 伴手禮買完回飯店</div>
+                    <div class="description">Citadines Rochor Singapore</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往金沙劇院</div>
+                <div class="details">
+                    <div class="transport">
+                        步行5分鐘<br><br>
+                        🚇 <strong style="background-color: blue; color: white; padding: 2px 6px; border-radius: 4px;">DT線</strong>
+                        往Expo方向 (3站)<br>
+                        Rochor上車 → Bayfront下車<br><br>
+                        步行8分鐘<br>
+                        <strong>路程共約25分鐘</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">19:00</div>
+                <div class="details">
+                    <div class="location">🎪 愛麗絲馬戲團 @ Sands Theatre</div>
+                    <div class="description">19:00可入場時間,20:00開始</div>
+                    <div class="tips">
+                        <div class="tips-title">⚠️ 注意事項</div>
+                        • 前60分鐘可進入，強烈建議提前到達<br>
+                        • 請注意，遲到的觀眾需等待至合適的演出休息時間才可入場<br>
+                        • 不得攜帶任何食品或飲料進入場館<br>
+                        • 嚴禁拍照、錄影、錄音和直播
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">返回飯店</div>
+                <div class="details">
+                    <div class="transport">
+                        步行7分鐘<br><br>
+                        🚇 <strong style="background-color: blue; color: white; padding: 2px 6px; border-radius: 4px;">DT線</strong>
+                        往Bukit Panjang方向 (3站)<br>
+                        Bayfront上車 → Rochor下車<br><br>
+                        步行5分鐘<br>
+                        <strong>路程共約24分鐘</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Day 5 -->
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-number">5</div>
+                <div class="day-title">
+                    <h2>星耀樟宜 + 返程</h2>
+                    <div class="day-date">10/10 (五)</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">前往機場</div>
+                <div class="details">
+                    <div class="transport">
+                        步行8分鐘<br><br>
+                        🚇 <strong style="background-color: blue; color: white; padding: 2px 6px; border-radius: 4px;">DT線</strong>
+                        往Expo方向 (13站)<br>
+                        Jalan Besar上車 → Expo下車<br><br>
+                        轉乘 <strong style="background-color: green; color: white; padding: 2px 6px; border-radius: 4px;">CG線</strong>
+                        往Changi Airport方向 (1站)<br>
+                        Expo上車 → Changi Airport下車<br><br>
+                        步行8分鐘<br>
+                        <strong>路程共約66分鐘</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">10:00</div>
+                <div class="details">
+                    <div class="location">⚡ Pokémon Center Singapore</div>
+                    <div class="description">機場4樓，營業時間 10:00-22:00</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">12:00</div>
+                <div class="details">
+                    <div class="location">💎 星耀樟宜 Jewel Changi Airport</div>
+                    <div class="description">最後一餐 - 再吃 Shake Shack Jewel Changi</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">14:00</div>
+                <div class="details">
+                    <div class="location">✈️ 樟宜機場第二航廈</div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="time">18:50</div>
+                <div class="details">
+                    <div class="location">🏠 抵達桃園機場第二航廈</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metro Info -->
+        <footer>
+            <h2 style="color: #667eea; margin-bottom: 20px;">🚇 新加坡捷運系統介紹</h2>
+            <div class="metro-info">
+                <div class="metro-line ns-line">
+                    <strong>🔴 南北線 North South Line (NS)</strong><br>
+                    經過：濱海灣 Marina Bay、烏節路 Orchard
+                </div>
+                <div class="metro-line ew-line">
+                    <strong>🟢 東西線 East West Line (EW)</strong><br>
+                    可在丹那美拉站 Tanah Merah 轉搭樟宜機場支線 Changi Airport Extension 直達樟宜機場
+                </div>
+                <div class="metro-line ne-line">
+                    <strong>🟣 東北線 North East Line (NE)</strong><br>
+                    經過：港灣 HarbourFront、牛車水 Chinatown、克拉碼頭 Clarke Quay
+                </div>
+                <div class="metro-line cc-line">
+                    <strong>🟠 環線 Circle Line (CC)</strong><br>
+                    從濱海灣 Marina Bay 繞一圈新加坡市區到港灣 HarbourFront<br>
+                    寶門廊站 Promenade 有一條支線延伸至多美歌站 Dhoby Ghaut
+                </div>
+                <div class="metro-line dt-line">
+                    <strong>🔵 濱海市區線 Downtown Line (DT)</strong><br>
+                    經過：植物園 Botanic Gardens、小印度 Little India、武吉士 Bugis、牛車水 Chinatown
+                </div>
+                <div class="metro-line te-line">
+                    <strong>🟤 湯申－東海岸線 Thomson-East Coast Line (TEL)</strong><br>
+                    經過：烏蘭、烏節路、濱海灣、勿洛南
+                </div>
+            </div>
+            <p style="margin-top: 25px; color: #666;">
+                🌟 官官祝您旅途愉快！Enjoy Singapore! 🇸🇬
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
